@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <div id="intro">
+        <img src = "https://i.imgur.com/d0V7VDc.png" />
+        <h1> {{ header }} </h1>
+        <p> {{ body1 }} </p>
+        <p> {{ body2 }} </p>
+        <p> {{ body3 }} </p>
+        <p> {{ body4 }} </p>
+        <p> {{ body5 }} </p>
+    </div>
+
+    <div id="work">
+            <h1> {{ header }} </h1>
+            <p> {{ body1 }} </p>
+            <p> {{ body2 }} </p>
+            <p> {{ body3 }} </p>
+            <p> {{ body4 }} </p>
+    </div>
+
+    <div id="contact">
+            <h1> {{ header }} </h1>
+            <p> {{ body1 }} </p>
+            <p> {{ body2 }} </p>
+
+    </div>
+</body>
+
+<script>
+    var intro = new Vue({
+        el: '#intro',
+        data: {
+            header: 'hi there, i\'m nikshep',
+            body1: `I come from a place called Bangalore located at the south of India.
+            It\'s a beautiful city with amazing weather, good food, lots of greenery and kind people -- I spent the first 18 years of my life growing up there.
+            I spent most of my time playing football outside in the sun, fiddling with anything that used batteries or was shiny, and pretending to be asleep so I can play DBZ on my Gameboy Advanced SP under the sheets without getting caught.
+            `,
+            body2: `As I grew older I continued gaming. I got a shiny new PSP and played a bunch of PES, God of War and some Final Fantasy. After a while I found a group of friends who introduced me to World of Warcraft
+            and I spent a few years with them griding away at quests and getting better at PvP (player vs player). Around that time I also started noticing that I was "naturally" good with computers, and started falling in love with the subject. I started giving it more time than other subjects at school and had some intrinsic motivation to do really well in it and stand out.
+            `,
+            body3: `Eventually being good at computers became something like a trait of mine, I prided myself in the subject and loved the idea behind it -- me and my friends attempted to found multiple "startups" to overthrow big corporations and 
+            every computer class became a competition where we raced among each other to get solutions to the problems our Teacher gave us the fastest.`,
+            body4: `When I was in grade 11ish and had to decide where I wanted to go to college my sights were locked on to places like the University of Waterloo, UC Berkely and every other great CS school. I didn't want to study in India because 
+            I felt like if I went to university here I would not be learning, but just memorizing instead -- I also wanted a peer group that was highly motivated and driven. So not only did I go to school from 9am to 7pm to prepare for the IIT-JEE's (super competetive exam for indian colleges) but I also spent several hours
+            each week researching about universities abroad, working on my common app essays and preparing for my SATs.`,
+            body5: `After I recieved my college decisions I decided to come to the University of Waterloo to study CS and I'm currently in my 2nd year -- my co-op experiences have been amazing, I've made amazing friends and travelled to multiple cities to attend different hackathons. 
+            I will be staying in the Velocity Residence next term and I'm looking forward to see where the road leads me to next.`
+            
+        }
+    })
+    var work = new Vue({
+        el: '#work',
+        data: {
+            header: 'my work',
+            body1: `I'm currently working as a Software Engineering Intern at PagerDuty on the Core Infrastructure team and I've previously worked as a Fullstack Developer intern at Magmic.`,
+            body2: `Both experiences have thought me a lot of new and exciting things, Magmic let me fully experience and work with a backend that handled tens of thousands of requests every minute 
+            while PagerDuty has showed me the infrastructure side of things and how large companies are able to scale effectively and stay reliable/available at the same time.`,
+            body3: `I've also worked on mutliple projects in my free time and at Hackathons. You can find them all over on my github! ScatterFly is probably my project that has recieved the most attention with over 150+ likes on facebook, 40+ stars and over 2,000 views on github.`,
+            body4: `I'm currently working on a project called GrubHog that enables you to find the best cheap eats and time-based deals in Toronto`
+        }
+    })
+
+    var contact = new Vue({
+        el: '#contact',
+        data: {
+            header: 'get a hold of me',
+            body1: `Think I sound like a cool person and want to have a chat? Want to hire me to work on something awesome? Want to ask me a question?`,
+            body2: `Just shoot me an email at nikshepsvn@gmail.com and I'll make sure to get back to you as fast as I can.`
+        }
+    })
+</script>
+
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background:azure;
+        overflow-x: hidden;
+    }
+
+    #intro {
+        width: 60%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: rgb(2,0,36);
+        background: linear-gradient(300deg, rgba(2,0,36,1) 0%, rgba(71,236,220,1) 0%, rgba(154,57,178,1) 100%, rgba(181,52,52,1) 0%, rgba(18,52,214,1) 0%);
+        position: relative;
+        top: 50%;
+        padding:2%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    #work {
+        width: 60%;
+        height: 40%;
+        background: rgb(2,0,36);
+        background: linear-gradient(300deg, rgba(2,0,36,1) 0%, rgba(71,236,220,1) 0%, rgba(154,57,178,1) 100%, rgba(181,52,52,1) 0%, rgba(18,52,214,1) 0%);
+        position: relative;
+        top: 50%;
+        padding:2%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+    }
+
+    #contact {
+        width: 60%;
+        height: 20%;
+        background: rgb(2,0,36);
+        background: linear-gradient(300deg, rgba(2,0,36,1) 0%, rgba(71,236,220,1) 0%, rgba(154,57,178,1) 100%, rgba(181,52,52,1) 0%, rgba(18,52,214,1) 0%);
+        position: relative;
+        top: 50%;
+        padding:2%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        margin-bottom: 10%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h1{
+        font-family: 'Bree Serif';
+        color:white;
+    }
+
+    p{
+        font-family: 'Open Sans';
+        font-weight:600;
+        color:white;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:100px;
+    }
+</style>
+
+</html>
